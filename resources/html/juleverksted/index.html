@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  type="text/css" rel="stylesheet" href="style.css">
+  <title>Nissen</title>
+</head>
+<body>
+<div class="container">
+  <div class="countdown">
+    <div id="days" class="time-box"><span id="d"></span><br><h2 class="white">dager</h2></div>
+    <div id="hours" class="time-box"><span id="h"></span><br><h2 class="white">timer</h2></div>
+    <div id="minutes" class="time-box"><span id="m"></span><br><h2 class="white">minutter</h2></div>
+    <div id="seconds" class="time-box"><span id="s"></span><br><h2 class="white">sekunder</h2></div>
+  </div>
+  <h1>Dager til Jul</h1>
+  <button class="button" onclick="window.location.href='https://media.snl.no/media/147796/standard_IMG_4857.JPG'">We wish you a...</button>
+  <button class="button" onclick="window.location.href='https://i1.sndcdn.com/artworks-000594363981-i3gbvk-t500x500.jpg'">Julenissen</button>
+  <button class="button" onclick="window.location.href='https://t.ctcdn.com.br/rPY6z7TjAZv0oThd7b94my2HtHY=/640x360/smart/i803253.jpeg'">Obama</button>
+  <button class="button" onclick="window.location.href='https://media.sketchfab.com/models/831f3531aef44c24817b58effff570f3/thumbnails/c68f677774164a42950d10588979efda/5bbc14b29b90424dbd2de7ee4d809fdc.jpeg'">Fazbear</button>
+  <button class="button" onclick="window.location.href='https://youtu.be/QwLvrnlfdNo?si=psxHS3VI6TDN8Yoo'">Whistle</button>
+  <button class="button" onclick="window.location.href='https://www.tiktok.com/@bjorn_norway/video/7295031978590588192'">Ooooh neii</button>
+  <button class="button" onclick="window.location.href='https://youtu.be/90hrY2EsG5M?si=s87gqZMs6YRRfDtN'">Golden hour</button>
+  <button class="button" onclick="window.location.href='https://youtu.be/kWsXajv6rS8?si=CqJMD682DE6BwSW7'">Top 5 Santa clause</button>
+  <button class="button" onclick="window.location.href='https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png'">Bestefaren min</button>
+</div>
+
+<script>
+setInterval(function() {
+  var now = new Date().getTime();
+  var christmas = new Date("Dec 25, " + new Date().getFullYear()).getTime();
+  var difference = christmas - now;
+  var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  document.getElementById("d").innerHTML = days;
+  document.getElementById("h").innerHTML = hours;
+  document.getElementById("m").innerHTML = minutes;
+  document.getElementById("s").innerHTML = seconds;
+}, 1000);
+</script>
+</body>
+</html>
