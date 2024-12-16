@@ -34,21 +34,22 @@
       width: 90%;
       max-width: 400px;
       text-align: center;
+      margin: 0 20px; /* Added left-right margin for spacing */
     }
 
     /* Title styling */
     h1 {
-      font-size: 2.8rem;
+      font-size: 3.2rem; /* Larger title */
       color: #d62828; /* Deep Christmas red */
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     /* Subtitle */
     p {
-      font-size: 1.2rem;
+      font-size: 1.5rem; /* Larger font for better readability */
       margin: 10px 0;
-      line-height: 1.6;
+      line-height: 1.8;
       color: #8b0000; /* Rich red */
     }
 
@@ -56,15 +57,15 @@
     .invite-details {
       background: #ffe6e6; /* Soft pastel pink */
       border-radius: 15px;
-      padding: 15px;
-      margin-top: 15px;
-      font-size: 1rem;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 1.2rem; /* Slightly larger font for details */
       color: #800000;
       box-shadow: 0 4px 10px rgba(255, 150, 150, 0.4);
     }
 
     .invite-details p {
-      margin: 8px 0;
+      margin: 10px 0;
     }
 
     /* Snowflake styles */
@@ -91,13 +92,13 @@
     /* Responsive adjustments */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.4rem;
+        font-size: 2.8rem;
       }
       p {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
       .invite-details {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
     }
   </style>
@@ -126,13 +127,13 @@
       snowflake.style.opacity = Math.random() * 0.5 + 0.5; // 50-100% opacity
       document.body.appendChild(snowflake);
 
-      // Remove snowflake after animation
-      snowflake.addEventListener('animationend', () => {
+      // Remove snowflake after 6 seconds (matching longest animation duration)
+      setTimeout(() => {
         snowflake.remove();
-      });
+      }, 6000);
     }
 
-    setInterval(createSnowflake, 150); // Create snowflakes faster for density
+    setInterval(createSnowflake, 250); // Create snowflakes every 250ms
   </script>
 </body>
 </html>
