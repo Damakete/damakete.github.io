@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christmas Invitation</title>
+  <title>Jule Invitasjon</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset styles */
     body, html {
       margin: 0;
       padding: 0;
@@ -15,65 +14,59 @@
       font-family: 'Dancing Script', cursive;
     }
 
-    /* Background */
     body {
-      background: linear-gradient(to bottom, #ff4d4d, #ff9999); /* Vibrant Christmas reds */
+      background: linear-gradient(to bottom, #2a3d66, #4f5e8e);
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #ffffff; /* White text for contrast */
+      color: #ffffff;
     }
 
-    /* Main container */
     .container {
-      background: rgba(255, 255, 255, 0.9); /* Light, semi-transparent white */
+      background: rgba(255, 255, 255, 0.9);
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
       border-radius: 20px;
       padding: 30px;
       width: 90%;
       max-width: 400px;
       text-align: center;
-      margin: 0 20px; /* Added left-right margin for spacing */
+      margin: 0 20px;
     }
 
-    /* Title styling */
     h1 {
-      font-size: 3.2rem; /* Larger title */
-      color: #d62828; /* Deep Christmas red */
+      font-size: 3.2rem;
+      color: #d62828;
       margin-bottom: 20px;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     }
 
-    /* Subtitle */
     p {
-      font-size: 1.5rem; /* Larger font for better readability */
+      font-size: 1.5rem;
       margin: 10px 0;
       line-height: 1.8;
-      color: #8b0000; /* Rich red */
+      color: #8b0000;
     }
 
-    /* Invitation details */
     .invite-details {
-      background: #ffe6e6; /* Soft pastel pink */
+      background: #f1f4ff;
       border-radius: 15px;
       padding: 20px;
       margin-top: 20px;
-      font-size: 1.2rem; /* Slightly larger font for details */
+      font-size: 1.2rem;
       color: #800000;
-      box-shadow: 0 4px 10px rgba(255, 150, 150, 0.4);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
     .invite-details p {
       margin: 10px 0;
     }
 
-    /* Snowflake styles */
     .snowflake {
       position: fixed;
       top: -10%;
-      font-size: 1.8rem; /* Bigger snowflakes */
-      color: #ffffff; /* Bright white */
+      font-size: 1.8rem;
+      color: #ffffff;
       opacity: 0.9;
       animation: fall linear infinite;
     }
@@ -89,7 +82,6 @@
       }
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       h1 {
         font-size: 2.8rem;
@@ -104,36 +96,34 @@
   </style>
 </head>
 <body>
-  <!-- Main Content -->
+  
   <div class="container">
-    <h1>🎄 Christmas Invitation 🎄</h1>
-    <p>You're warmly invited to our Christmas celebration!</p>
+    <h1>🎄 Jule Invitasjon 🎄</h1>
+    <p>Du er hjertelig invitert til vår julefeiring!</p>
     <div class="invite-details">
-      <p><strong>Date:</strong> December 24, 2024</p>
-      <p><strong>Time:</strong> 6:00 PM</p>
-      <p><strong>Location:</strong> 123 Christmas Lane, Holiday Town</p>
+      <p><strong>Dato:</strong> Desember 20, 2024</p>
+      <p><strong>Tid:</strong> 10:45</p>
+      <p><strong>Klasse:</strong> 2IK1, rom 173</p>
     </div>
   </div>
 
-  <!-- Snowflake Animation -->
   <script>
     function createSnowflake() {
       const snowflake = document.createElement('div');
       snowflake.className = 'snowflake';
       snowflake.textContent = '❄';
       snowflake.style.left = Math.random() * window.innerWidth + 'px';
-      snowflake.style.animationDuration = Math.random() * 2 + 3 + 's'; // 3-5 seconds
-      snowflake.style.fontSize = Math.random() * 10 + 20 + 'px'; // 20-30px size for better visibility
-      snowflake.style.opacity = Math.random() * 0.5 + 0.5; // 50-100% opacity
+      snowflake.style.animationDuration = Math.random() * 2 + 3 + 's';
+      snowflake.style.fontSize = Math.random() * 10 + 20 + 'px';
+      snowflake.style.opacity = Math.random() * 0.5 + 0.5;
       document.body.appendChild(snowflake);
 
-      // Remove snowflake after 6 seconds (matching longest animation duration)
       setTimeout(() => {
         snowflake.remove();
       }, 6000);
     }
 
-    setInterval(createSnowflake, 250); // Create snowflakes every 250ms
+    setInterval(createSnowflake, 250);
   </script>
 </body>
 </html>
