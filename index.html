@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    /* Background */
+    body {
+      background: linear-gradient(to bottom, #ff4d4d, #ff9999); /* Vibrant Christmas reds */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff; /* White text for contrast */
+    }
+
+    /* Main container */
+    .container {
+      background: rgba(255, 255, 255, 0.9); /* Light, semi-transparent white */
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    /* Title styling */
+    h1 {
+      font-size: 2.8rem;
+      color: #d62828; /* Deep Christmas red */
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Subtitle */
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #8b0000; /* Rich red */
+    }
+
+    /* Invitation details */
+    .invite-details {
+      background: #ffe6e6; /* Soft pastel pink */
+      border-radius: 15px;
+      padding: 15px;
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #800000;
+      box-shadow: 0 4px 10px rgba(255, 150, 150, 0.4);
+    }
+
+    .invite-details p {
+      margin: 8px 0;
+    }
+
+    /* Snowflake styles */
+    .snowflake {
+      position: fixed;
+      top: -10%;
+      font-size: 1.8rem; /* Bigger snowflakes */
+      color: #ffffff; /* Bright white */
+      opacity: 0.9;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh);
+        opacity: 0.6;
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .invite-details {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Content -->
+  <div class="container">
+    <h1>🎄 Christmas Invitation 🎄</h1>
+    <p>You're warmly invited to our Christmas celebration!</p>
+    <div class="invite-details">
+      <p><strong>Date:</strong> December 24, 2024</p>
+      <p><strong>Time:</strong> 6:00 PM</p>
+      <p><strong>Location:</strong> 123 Christmas Lane, Holiday Town</p>
+    </div>
+  </div>
+
+  <!-- Snowflake Animation -->
+  <script>
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.className = 'snowflake';
+      snowflake.textContent = '❄';
+      snowflake.style.left = Math.random() * window.innerWidth + 'px';
+      snowflake.style.animationDuration = Math.random() * 2 + 3 + 's'; // 3-5 seconds
+      snowflake.style.fontSize = Math.random() * 10 + 20 + 'px'; // 20-30px size for better visibility
+      snowflake.style.opacity = Math.random() * 0.5 + 0.5; // 50-100% opacity
+      document.body.appendChild(snowflake);
+
+      // Remove snowflake after animation
+      snowflake.addEventListener('animationend', () => {
+        snowflake.remove();
+      });
+    }
+
+    setInterval(createSnowflake, 150); // Create snowflakes faster for density
+  </script>
+</body>
+</html>
